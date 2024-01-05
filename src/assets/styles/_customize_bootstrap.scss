@@ -1,0 +1,15 @@
+/**
+* Set SCSS variables below
+*/
+
+$primary: hsl(47, 88%, 63%);
+
+/**
+* Import bare minimum of bootstrap
+*/
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+/**
+* 3 - Now you can refine Bootstrap here
+*/

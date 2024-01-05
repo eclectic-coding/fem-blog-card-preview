@@ -1,0 +1,54 @@
+/*set color palette*/
+:root {
+  /*primary*/
+  --color-primary: hsl(47, 88%, 63%);
+
+  /*neutral*/
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(0, 0%, 50%);
+  --color-black: hsl(0, 0%, 7%);
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--color-primary);
+  --color-card-background: var(--color-white);
+  --color-text-dark: var(--color-black);
+  --color-text-grey: var(--color-grey);
+}
+
+/*font-family: 'Fraunces', serif;*/
+
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: Figtree,serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  background-color: var(--color-background);
+}
+
+.grid-container {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 50px;
+  grid-template-areas: 'main' 'footer';
+
+  justify-items: center;
+  align-items: center;
+}
+
+main {
+  grid-area: main;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 1rem;
+}
