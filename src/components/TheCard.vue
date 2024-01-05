@@ -24,11 +24,20 @@
 
 <style scoped lang="scss">
 .card {
+  display: flex;
   width: 384px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  flex-shrink: 0;
   border-radius: 20px;
   border: 1px solid var(--color-black);
   background: var(--color-card-background);
   box-shadow: 8px 8px 0 0 #000;
+
+  @media (max-width: 375px) {
+    width: 327px;
+  }
 
   & > img {
     display: flex;
@@ -38,18 +47,23 @@
   }
 
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
     color: var(--color-text-grey);
-    padding: 1rem 0;
   }
 
   &__button {
     display: flex;
     padding: 4px 12px;
-    margin: 0.75rem 0;
     justify-content: center;
     align-items: center;
-    background: var(--color-primary);
+    gap: 8px;
     border-radius: 4px;
+    background: var(--color-primary);
+
     color: var(--color-text-dark);
     font-size: 14px;
     font-weight: 800;
@@ -57,25 +71,35 @@
     width: 89px;
   }
 
+  &__subtitle {
+    color: var(--color-text-dark);
+
+    font-family: Figtree,serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 21px */
+  }
+
   h1 {
     color: var(--color-text-dark);
-    font-family: Figtree, serif;
+    font-family: Figtree,serif;
     font-size: 24px;
     font-style: normal;
     font-weight: 800;
-    line-height: 150%;
+    line-height: 150%; /* 36px */
     cursor: pointer;
     transition: color 0.2s ease-in-out;
 
     &:hover {
       color: var(--color-primary);
     }
+
+    @media (max-width: 375px) {
+      font-size: 20px;
+    }
   }
 
-  &__subtitle {
-    color: var(--color-text-dark);
-    font-size: 14px;
-  }
 
   &__footer {
     color: var(--color-text-dark);
